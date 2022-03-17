@@ -22,7 +22,12 @@ variable "id_s3" {
 }
 
 variable "sg_lb" {
-  type = list(string)
+  type    = list(string)
   default = ["sg-0bc41796ed8a952f2"]
 }
 
+
+variable "subnets_lb" {
+  type    = list(string)
+  default = ["subnet-0e5e136aa686c7336", "subnet-01eb577852a061ca1", "subnet-0b8ec0c0cc65e83fe"]
+}

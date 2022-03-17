@@ -12,7 +12,7 @@ resource "aws_autoscaling_group" "atlantis_ecs" {
   desired_capacity          = 4
   force_delete              = true
   placement_group           = aws_placement_group.atlantis_ecs.id
-  launch_configuration      = aws_launch_configuration.ubuntu_20_04.atlantis_ecs
+  launch_configuration      = aws_launch_configuration.ubuntu_20_04.name
   vpc_zone_identifier       = var.subnets_lb
 
   target_group_arns = aws_lb_target_group.tg_ecs.arn

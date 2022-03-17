@@ -4,7 +4,7 @@ resource "aws_placement_group" "atlantis_ecs" {
 }
 
 resource "aws_autoscaling_group" "atlantis_ecs" {
-  name                      = "foobar3-terraform-test"
+  name                      = "atlantis_ecs"
   max_size                  = 1
   min_size                  = 1
   health_check_grace_period = 1

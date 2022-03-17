@@ -9,7 +9,7 @@ resource "aws_autoscaling_group" "atlantis_ecs" {
   min_size                  = 1
   health_check_grace_period = 1
   health_check_type         = "ELB"
-  desired_capacity          = 4
+  desired_capacity          = 1
   force_delete              = true
   placement_group           = aws_placement_group.atlantis_ecs.id
   launch_configuration      = aws_launch_configuration.ubuntu_20_04.name

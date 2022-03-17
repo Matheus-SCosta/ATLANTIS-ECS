@@ -15,7 +15,7 @@ resource "aws_autoscaling_group" "atlantis_ecs" {
   launch_configuration      = aws_launch_configuration.ubuntu_20_04.name
   vpc_zone_identifier       = var.subnets_lb
 
-  target_group_arns = "[ aws_lb_target_group.tg_ecs.arn ]"
+  target_group_arns = "${aws_lb_target_group.tg_ecs.arn}"
 
   tag {
     key                 = "foo"

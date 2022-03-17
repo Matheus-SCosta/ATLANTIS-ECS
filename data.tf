@@ -8,7 +8,7 @@ data "aws_vpc" "vpc_default" {
 
 data "aws_ami" "ubuntu_20_04" {
   most_recent = true
-  owners      = ["self"]
+  owners      = ["099720109477"]
   filter {
     name   = "name"
     values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20211129"]

@@ -20,3 +20,9 @@ variable "id_s3" {
   type    = string
   default = "exemplo"
 }
+
+variable "sg_lb" {
+  type = string
+  default = "sg-0bc41796ed8a952f2"
+}
+

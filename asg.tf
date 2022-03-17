@@ -14,7 +14,7 @@ resource "aws_autoscaling_group" "atlantis_ecs" {
   placement_group           = aws_placement_group.atlantis_ecs.id
   launch_configuration      = aws_launch_configuration.ubuntu_20_04.atlantis_ecs
   vpc_zone_identifier       = var.subnets_lb
-  
+
   target_group_arns = aws_lb_target_group.tg_ecs.arn
 
   tag {

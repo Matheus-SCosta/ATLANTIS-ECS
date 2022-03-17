@@ -10,7 +10,7 @@ resource "aws_lb" "lb_ecs" {
   name               = "lb-ecs"
   internal           = false
   load_balancer_type = "application"
-  security_groups    = [ data.aws_security_group.sg_ecs.id ]
+  security_groups    = [data.aws_security_group.sg_ecs.id]
   subnets            = var.subnets_lb
 
   enable_deletion_protection = true

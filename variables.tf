@@ -22,7 +22,7 @@ variable "id_s3" {
 }
 
 variable "sg_lb" {
-  type = string
-  default = "sg-0bc41796ed8a952f2"
+  type = list(string)
+  default = ["sg-0bc41796ed8a952f2"]
 }
 

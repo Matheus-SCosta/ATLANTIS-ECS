@@ -1,0 +1,18 @@
+version: 3
+projects:
+
+- dir: .
+  workflow: custom1
+
+workflows:
+  custom1:
+    plan:
+      steps:
+      - init
+      - run: echo "Executando terraform plan"
+      - plan
+    apply:
+      steps:
+      - run: echo "Executando terraform apply"
+      - apply  
+    

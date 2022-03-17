@@ -1,8 +1,8 @@
-resource "aws_ecs_cluster" "atlantis" {
-  name = "atlantis"
+#resource "aws_ecs_cluster" "atlantis" {
+#  name = "atlantis"
 
-  setting {
-    name  = "containerInsights"
-    value = "enabled"
-  }
-}
+#  setting {
+#    name  = "containerInsights"
+#    value = "enabled"
+#  }
+#}

@@ -1,6 +1,6 @@
 resource "aws_lb_target_group" "tg_ecs" {
   name     = "tg-ecs"
-  port     = 80
+  port     = 4141
   protocol = "HTTP"
   vpc_id   = data.aws_vpc.vpc_default.id
 }

@@ -16,7 +16,6 @@ resource "aws_lb" "lb_ecs" {
   enable_deletion_protection = true
 
   tags = {
-    Name        = "ECS-HOST-ATLANTIS"
     Environment = "teste"
   }
 }

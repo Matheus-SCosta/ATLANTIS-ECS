@@ -1,5 +1,5 @@
 resource "aws_autoscaling_group" "atlantis_ecs" {
-  name                      = "atlantis_ecs"
+  name                      = "${var.resource_name}_ecs"
   max_size                  = 2
   min_size                  = 0
   health_check_grace_period = 1

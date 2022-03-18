@@ -1,5 +1,5 @@
 resource "aws_ecs_task_definition" "atlantis" {
-  family = "atlantis"
+  family = var.resource_name
   container_definitions = jsonencode([
     {
       name      = "atlantis_container"

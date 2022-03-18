@@ -35,3 +35,8 @@ variable "port_atlantis" {
   type = number
   default = 4141
 }
+
+variable "resource_name" {
+  type = string
+  default = "atlantis"
+}

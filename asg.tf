@@ -6,7 +6,7 @@ resource "aws_autoscaling_group" "atlantis_ecs" {
   health_check_type         = "ELB"
   desired_capacity          = 1
   force_delete              = true
-  launch_configuration      = aws_launch_configuration.ubuntu_20_04.name
+  #launch_configuration      = aws_launch_configuration.ubuntu_20_04.name
   vpc_zone_identifier       = var.subnets_lb
 
   tag {

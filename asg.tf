@@ -5,8 +5,8 @@ resource "aws_placement_group" "atlantis_ecs" {
 
 resource "aws_autoscaling_group" "atlantis_ecs" {
   name                      = "atlantis_ecs"
-  max_size                  = 1
-  min_size                  = 1
+  max_size                  = 2
+  min_size                  = 0
   health_check_grace_period = 1
   health_check_type         = "ELB"
   desired_capacity          = 1

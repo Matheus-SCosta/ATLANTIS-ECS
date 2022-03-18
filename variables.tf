@@ -30,3 +30,8 @@ variable "subnets_lb" {
   type    = list(string)
   default = ["subnet-0e5e136aa686c7336", "subnet-01eb577852a061ca1", "subnet-0b8ec0c0cc65e83fe"]
 }
+
+variable "port_atlantis" {
+  type = number
+  default = 4141
+}

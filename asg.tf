@@ -6,7 +6,7 @@ resource "aws_autoscaling_group" "atlantis_ecs" {
   health_check_type         = "EC2"
   desired_capacity          = 1
   force_delete              = true
-  launch_configuration      = aws_launch_configuration.ubuntu.name
+  launch_configuration      = aws_launch_configuration.ubuntu_v2.name
   vpc_zone_identifier       = var.subnets_lb
 
   tag {

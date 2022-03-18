@@ -9,7 +9,7 @@ resource "aws_ecs_task_definition" "atlantis" {
       essential = true
       portMappings = [
         {
-          containerPort = 80
+          containerPort = 4141
         }
       ]
     }

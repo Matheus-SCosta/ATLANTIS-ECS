@@ -11,11 +11,10 @@ resource "aws_autoscaling_group" "atlantis_ecs" {
 
   tag {
     key                 = "Name"
-    value               = "ECS-HOST-ATLANTI"
+    value               = "ECS-HOST-ATLANTIS"
     propagate_at_launch = true
   }
 
-    
   timeouts {
     delete = "15m"
   }

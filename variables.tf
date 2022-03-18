@@ -15,7 +15,6 @@ variable "tags_ec2" {
   }
 }
 
-
 variable "id_s3" {
   type    = string
   default = "exemplo"

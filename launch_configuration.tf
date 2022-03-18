@@ -5,7 +5,7 @@ resource "aws_launch_configuration" "ubuntu_20_04" {
  
 }
 
-resource "aws_launch_configuration" "ubuntu" {
+resource "aws_launch_configuration" "ubuntu_v2" {
   name          = "atlantis_ecs"
   image_id      = data.aws_ami.ubuntu.id
   instance_type = "t2.micro"

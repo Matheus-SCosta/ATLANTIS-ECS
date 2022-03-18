@@ -12,5 +12,6 @@ resource "aws_launch_configuration" "ubuntu" {
   instance_type = "t2.micro"
   user_data     = file("user_data.sh")
   security_groups    = [data.aws_security_group.sg_ecs.id]
+  key_name = "SNS"
 
 }

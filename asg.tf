@@ -11,7 +11,7 @@ resource "aws_autoscaling_group" "atlantis_ecs" {
 
   tag {
     key                 = "Name"
-    value               = "ECS-HOST-ATLANTIS"
+    value               = "ECS-HOST-ATLANTI"
     propagate_at_launch = true
   }
 

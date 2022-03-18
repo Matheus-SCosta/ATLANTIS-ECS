@@ -8,7 +8,6 @@ resource "aws_autoscaling_group" "atlantis_ecs" {
   force_delete              = true
   launch_configuration      = aws_launch_configuration.ubuntu_20_04.name
   vpc_zone_identifier       = var.subnets_lb
-  user_data                 = "#!/bin/bash\necho ECS_CLUSTER=atlantis >> /etc/ecs/ecs.config"
 
   tag {
     key                 = "Name"

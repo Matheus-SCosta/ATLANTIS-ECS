@@ -22,3 +22,21 @@ data "aws_ami" "ubuntu" {
     values = ["hvm"]
   }
 }  
+
+
+data "aws_ami" "amazon_linux" {
+  most_recent = true
+  owners      = ["099720109477"]
+  filter {
+    name   = "name"
+    values = ["amazon/amzn2-ami-ecs-hvm-2.0.20220318-x86_64-ebs"]
+  }
+  filter {
+    name   = "root-device-type"
+    values = ["ebs"]
+  }
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+}  

@@ -1,18 +1,18 @@
-#resource "aws_ecs_cluster" "atlantis" {
-#  name               = "atlantis"
-#  capacity_providers = [aws_ecs_capacity_provider.asg_atlantis.name]
+resource "aws_ecs_cluster" "atlantis" {
+  name               = "atlantis"
+  capacity_providers = [aws_ecs_capacity_provider.asg_atlantis.name]
 
-#  default_capacity_provider_strategy {
-#    base              = 1
-#    weight            = 10
-#    capacity_provider = aws_ecs_capacity_provider.asg_atlantis.name
-#  }
+  default_capacity_provider_strategy {
+    base              = 1
+    weight            = 10
+    capacity_provider = aws_ecs_capacity_provider.asg_atlantis.name
+  }
 
-#  setting {
-#    name  = "containerInsights"
-#    value = "enabled"
-#  }
-#}
+  setting {
+    name  = "containerInsights"
+    value = "enabled"
+  }
+}
 
 
 #resource "aws_ecs_capacity_provider" "asg_atlantis" {

@@ -2,7 +2,7 @@ resource "aws_ecs_service" "atlantis" {
   name            = var.resource_name
   cluster         = aws_ecs_cluster.atlantis.id
   task_definition = aws_ecs_task_definition.atlantis.arn
-  desired_count   = 1
+  desired_count   = 2
 
 
   load_balancer {

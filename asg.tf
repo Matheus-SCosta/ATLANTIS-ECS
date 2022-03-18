@@ -1,8 +1,3 @@
-resource "aws_placement_group" "atlantis_ecs" {
-  name     = "test"
-  strategy = "cluster"
-}
-
 resource "aws_autoscaling_group" "atlantis_ecs" {
   name                      = "atlantis_ecs"
   max_size                  = 2
@@ -11,7 +6,6 @@ resource "aws_autoscaling_group" "atlantis_ecs" {
   health_check_type         = "ELB"
   desired_capacity          = 1
   force_delete              = true
-  placement_group           = aws_placement_group.atlantis_ecs.id
   launch_configuration      = aws_launch_configuration.ubuntu_20_04.name
   vpc_zone_identifier       = var.subnets_lb
 

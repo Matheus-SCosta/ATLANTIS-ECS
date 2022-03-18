@@ -5,6 +5,7 @@ resource "aws_launch_configuration" "amazon_linux" {
   user_data     = "#!/bin/bash\necho ECS_CLUSTER=atlantis >> /etc/ecs/ecs.config"
   security_groups    = [data.aws_security_group.sg_ecs.id]
   key_name = "SNS"
+  iam_instance_profile = "ecsInstanceRole"
 }
 
 

@@ -6,7 +6,7 @@ data "aws_vpc" "vpc_default" {
   cidr_block = "172.31.0.0/16"
 }
 
-data "aws_ami" "ubuntu_20_04" {
+data "aws_ami" "ubuntu" {
   most_recent = true
   owners      = ["099720109477"]
   filter {

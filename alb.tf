@@ -15,8 +15,16 @@ resource "aws_lb" "lb_ecs" {
 
   enable_deletion_protection = true
 
-  tags = {
+  instance_refresh {
+    strategy = "Rolling"
+    preferences {
+      min_healthy_percentage = 50
+    }
+    triggers = ["tag"]
+  }
 
+  tags = {
+    Name        = "ECS-HOST"
     Environment = "teste"
   }
 }

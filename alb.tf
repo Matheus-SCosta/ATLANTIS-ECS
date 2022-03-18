@@ -1,7 +1,11 @@
+locals {
+    protocol = "HTTP"
+}
+
 resource "aws_lb_target_group" "tg_ecs" {
   name     = "tg-ecs"
   port     = var.port_atlantis
-  protocol = "HTTP"
+  protocol = local.protocol
   vpc_id   = data.aws_vpc.vpc_default.id
 }
 
@@ -23,7 +27,7 @@ resource "aws_lb" "lb_ecs" {
 resource "aws_lb_listener" "tg_ecs_listener" {
   load_balancer_arn = aws_lb.lb_ecs.arn
   port              = "80"
-  protocol          = "HTTP"
+  protocol          = local.protocol
 
   default_action {
     type             = "forward"

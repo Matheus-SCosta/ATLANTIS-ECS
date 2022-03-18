@@ -21,7 +21,7 @@ resource "aws_lb" "lb_ecs" {
   }
 }
 
-resource "aws_lb_listener" "front_end" {
+resource "aws_lb_listener" "tg_ecs_listener" {
   load_balancer_arn = aws_lb.lb_ecs.arn
   port              = "80"
   protocol          = "HTTP"

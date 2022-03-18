@@ -20,11 +20,6 @@ resource "aws_autoscaling_group" "atlantis_ecs" {
     delete = "15m"
   }
 
-  tag {
-    key                 = "Env"
-    value               = "teste"
-    propagate_at_launch = false
-  }
 }
 
 
